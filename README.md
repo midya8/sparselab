@@ -53,9 +53,27 @@ The one-sweep run uses the **same objective, data, initialization and order** as
 
 ## Verification
 
-28 tests: 25 behavior/CLI tests plus 3 figure tests. Analytic scalar/orthogonal controls, ten seeded exact-rational comparisons, duplicate solutions and convex mixtures, primal/dual equations and weak duality, history monotonicity, warm/cold agreement, response/feature signs, row/column permutation, row replication, scale/penalty equivalence, zero columns, honest sweep limits, strict malformed inputs, nonmutation and unchanged global RNG state.
+The original 28 tests (retained): 25 behavior/CLI tests plus 3 figure tests. Analytic scalar/orthogonal controls, ten seeded exact-rational comparisons, duplicate solutions and convex mixtures, primal/dual equations and weak duality, history monotonicity, warm/cold agreement, response/feature signs, row/column permutation, row replication, scale/penalty equivalence, zero columns, honest sweep limits, strict malformed inputs, nonmutation and unchanged global RNG state.
 
-The SVG checks cover all 18 coefficient points/polyline geometry, all 23 summary cells and their coordinates, full compressed JSON metadata, hidden intermediate-history tampering, and byte-exact regeneration. CI runs Python 3.10-3.13. A five-module wheel must reproduce both complete CLI JSON outputs outside the source checkout.
+The SVG checks cover all 18 coefficient points/polyline geometry, all 23 summary cells and their coordinates, full compressed JSON metadata, hidden intermediate-history tampering, and byte-exact regeneration. CI runs Python 3.10-3.13. The original five-module packaging check reproduced both CLI outputs; the extension below raises this to six modules and all four outputs.
+
+## Exact Gap Safe screening extension
+
+`screen(X,y,coefficients,penalty)` audits a supplied iterate with exact rational arithmetic over the stored binary64 inputs. It constructs an exactly feasible dual point and gap, then uses `R_squared=2*gap/N` and a **strict, square-root-free** sphere test to certify some coordinates zero in every optimizer. It does not change the floating solver or claim acceleration.
+
+![Exact Gap Safe positive and negative screening controls](assets/safe-screening.svg)
+
+A near iterate with current coefficient `beta_2=1/32` has exact gap `5/1024` and certifies that its optimum coefficient is zero. Its exact ball term `5/512` is below squared margin `25/1024`, leaving strict slack `15/1024`. But at another exact optimum `beta_2=0` lies on the dual boundary: gap and radius are zero yet the strict test cannot certify that feature. Duplicate features are also correctly left uncertified. `not_certified` never means active or relevant.
+
+```bash
+python -m sparselab screen-demo
+python -m sparselab screen examples/screen-input.json
+python examples/render_screening.py --check
+```
+
+[Derivation, all six controls and arithmetic scope](SCREENING.md) · [Complete screening report](examples/screen-demo.json). The original 28 checks remain; 14 new behavior and 3 new SVG checks bring the total to **45 tests**. Includes 24 additional seeded exact-oracle soundness/ball-containment comparisons, strict equality, all exact equations and replication/scaling controls. New figure checks all 27 exact cells, two squared-bound bar geometries, full rational metadata and hidden-dual tampering. A six-module v0.2 wheel reproduces all four complete CLI JSON outputs outside checkout; both SVGs regenerate byte-exactly. Original core/oracle/demo/figure unchanged.
+
+Standard rule: Fercoq, Gramfort and Salmon, [Mind the duality gap: safer rules for the Lasso](https://proceedings.mlr.press/v37/fercoq15.html). Exact statements concern the rational model of the supplied stored inputs, not unknown pre-rounding data, causal relevance, statistical coverage or every true zero. No new screening theorem or speedup claim.
 
 ## Scope and attribution
 
