@@ -82,3 +82,21 @@ This is a small dense numerical reference, not a scalable sparse solver. Fits ac
 Floating-point dual/KKT witnesses are **not directed-rounding certificates**. Positive ridge is not silently added to remove nonuniqueness. Coefficients depend on feature units and may be nonunique. No cross-validation, held-out prediction claim, feature causality, statistical coverage, post-selection inference, logistic model or new optimization algorithm.
 
 Standard methods: Friedman, Hastie and Tibshirani, [Regularization Paths for Generalized Linear Models via Coordinate Descent](https://pmc.ncbi.nlm.nih.gov/articles/PMC2929880/), especially Section 2; Ryan Tibshirani's [Coordinate Descent notes](https://www.stat.cmu.edu/~ryantibs/convexopt/lectures/coord-desc.pdf) for soft-threshold/KKT and LASSO dual geometry. SparseLab's implementation, exact witnesses, controls and report format are original code applying those methods. MIT license.
+
+## Exact affine branch extension
+
+A feature can leave the LASSO support and later return with the opposite sign. `branch(X, y, signs)` solves one supplied branch's exact Gram equations and intersects all affine sign/inactive KKT inequalities. It returns the maximal closed nonnegative-lambda interval for that weak-sign branch, every bound/tie and exact zero-gap endpoint/interior witnesses. The developed two-feature control covers lambda from infinity to 0 with five explicitly supplied branches: feature 1 leaves at 1 and re-enters negative at 1/3. Adjacent knots agree exactly. Singular selected Grams are explicit noncertificates, not silently ridged or called infeasible.
+
+![Exact affine path with support drop and sign-reversed re-entry](assets/regularization-branches.svg)
+
+```bash
+python -m sparselab branch-demo
+python -m sparselab branch examples/branch-input.json
+python examples/render_branches.py --check
+```
+
+[Derivation, exact interval table, weak-sign/singular semantics and limits](BRANCHES.md) · [complete exact report](examples/branch-demo.json) · [caller input](examples/branch-input.json).
+
+62 tests retain all 45 prior checks and add 14 branch behavior checks plus 3 figure checks. Twelve seeded five-row/three-feature designs exercise all 27supplied sign patterns, reconstruct accepted endpoint/interior KKT and zero gaps, and compare dyadic in-interval samples with the independent per-lambda enumerator. Analytic knots, all limiting ties/outside violations, transformations/N normalization, singleton/empty/singular controls, strict JSON and128x12 capacity are checked. The third SVG verifies20 table cells, both full path geometries/all 10vertices, five knots and full exact metadata including hidden-Gram tampering. The seven-module v0.3 wheel reproduces all six complete CLI JSON outputs outside checkout; all three SVGs regenerate byte-exactly. Original solver/oracle/demos/screening outputs are unchanged.
+
+This is a one-branch verifier with standard KKT/linear algebra, not a general LARS/path-following implementation, full-path completeness guarantee, novel theorem or speed benchmark. Selected signs allow boundary zeros and are not a recovered support. Exactness concerns the stored binary64 inputs interpreted as rationals, not unknown pre-rounding data. The per-lambda oracle shares a linear-system helper; independent equation reconstruction and closed-form fixtures supplement that comparison. Established piecewise-linear path methods are credited in [BRANCHES.md](BRANCHES.md). No causal feature meaning or predictive advantage is claimed.
