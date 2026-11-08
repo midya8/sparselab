@@ -1,0 +1,1931 @@
+{
+  "correlated": {
+    "X": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -3
+      ]
+    ],
+    "events": [
+      {
+        "event": "enter_positive",
+        "feature": 1,
+        "penalty": "3"
+      },
+      {
+        "event": "enter_positive",
+        "feature": 0,
+        "penalty": "4/3"
+      },
+      {
+        "event": "leave",
+        "feature": 1,
+        "penalty": "1"
+      },
+      {
+        "event": "reenter_negative",
+        "feature": 1,
+        "penalty": "1/3"
+      }
+    ],
+    "segments": [
+      {
+        "X": [
+          [
+            "1",
+            "3"
+          ],
+          [
+            "1",
+            "1"
+          ],
+          [
+            "-1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-3"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "certified": true,
+        "coefficient_intercepts": [
+          "0",
+          "0"
+        ],
+        "coefficient_slopes": [
+          "0",
+          "0"
+        ],
+        "constraints": [
+          {
+            "bound": "0",
+            "bound_type": "lower",
+            "feature": null,
+            "intercept": "0",
+            "kind": "nonnegative_lambda",
+            "slope": "1"
+          },
+          {
+            "bound": "2",
+            "bound_type": "lower",
+            "feature": 0,
+            "intercept": "-2",
+            "kind": "inactive_upper",
+            "slope": "1"
+          },
+          {
+            "bound": "-2",
+            "bound_type": "lower",
+            "feature": 0,
+            "intercept": "2",
+            "kind": "inactive_lower",
+            "slope": "1"
+          },
+          {
+            "bound": "3",
+            "bound_type": "lower",
+            "feature": 1,
+            "intercept": "-3",
+            "kind": "inactive_upper",
+            "slope": "1"
+          },
+          {
+            "bound": "-3",
+            "bound_type": "lower",
+            "feature": 1,
+            "intercept": "3",
+            "kind": "inactive_lower",
+            "slope": "1"
+          }
+        ],
+        "correlation_intercepts": [
+          "2",
+          "3"
+        ],
+        "correlation_slopes": [
+          "0",
+          "0"
+        ],
+        "cross": [
+          "2",
+          "3"
+        ],
+        "endpoints": [
+          {
+            "coefficients": [
+              "0",
+              "0"
+            ],
+            "correlations": [
+              "2",
+              "3"
+            ],
+            "dual": "5/2",
+            "dual_vector": [
+              "1/4",
+              "3/4",
+              "-3/4",
+              "-1/4"
+            ],
+            "gap": "0",
+            "penalty": "3",
+            "prediction": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "primal": "5/2",
+            "residual": [
+              "1",
+              "3",
+              "-3",
+              "-1"
+            ],
+            "slacks": [
+              "3",
+              "1",
+              "5",
+              "0",
+              "6"
+            ],
+            "tight_constraints": [
+              3
+            ]
+          }
+        ],
+        "gram": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "5"
+          ]
+        ],
+        "impossible_constraints": [],
+        "interior": {
+          "coefficients": [
+            "0",
+            "0"
+          ],
+          "correlations": [
+            "2",
+            "3"
+          ],
+          "dual": "5/2",
+          "dual_vector": [
+            "1/4",
+            "3/4",
+            "-3/4",
+            "-1/4"
+          ],
+          "gap": "0",
+          "penalty": "4",
+          "prediction": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "primal": "5/2",
+          "residual": [
+            "1",
+            "3",
+            "-3",
+            "-1"
+          ],
+          "slacks": [
+            "4",
+            "2",
+            "6",
+            "1",
+            "7"
+          ],
+          "tight_constraints": []
+        },
+        "lower": "3",
+        "schema_version": 1,
+        "scope": "one weak active/sign branch; not a general path-following solver",
+        "selected": [],
+        "signs": [
+          0,
+          0
+        ],
+        "status": "certified_segment",
+        "strict_selected_signs_at_probe": true,
+        "upper": null,
+        "y": [
+          "1",
+          "3",
+          "-3",
+          "-1"
+        ]
+      },
+      {
+        "X": [
+          [
+            "1",
+            "3"
+          ],
+          [
+            "1",
+            "1"
+          ],
+          [
+            "-1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-3"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "certified": true,
+        "coefficient_intercepts": [
+          "0",
+          "3/5"
+        ],
+        "coefficient_slopes": [
+          "0",
+          "-1/5"
+        ],
+        "constraints": [
+          {
+            "bound": "0",
+            "bound_type": "lower",
+            "feature": null,
+            "intercept": "0",
+            "kind": "nonnegative_lambda",
+            "slope": "1"
+          },
+          {
+            "bound": "4/3",
+            "bound_type": "lower",
+            "feature": 0,
+            "intercept": "-4/5",
+            "kind": "inactive_upper",
+            "slope": "3/5"
+          },
+          {
+            "bound": "-4/7",
+            "bound_type": "lower",
+            "feature": 0,
+            "intercept": "4/5",
+            "kind": "inactive_lower",
+            "slope": "7/5"
+          },
+          {
+            "bound": "3",
+            "bound_type": "upper",
+            "feature": 1,
+            "intercept": "3/5",
+            "kind": "selected_sign",
+            "slope": "-1/5"
+          }
+        ],
+        "correlation_intercepts": [
+          "4/5",
+          "0"
+        ],
+        "correlation_slopes": [
+          "2/5",
+          "1"
+        ],
+        "cross": [
+          "2",
+          "3"
+        ],
+        "endpoints": [
+          {
+            "coefficients": [
+              "0",
+              "1/3"
+            ],
+            "correlations": [
+              "4/3",
+              "4/3"
+            ],
+            "dual": "20/9",
+            "dual_vector": [
+              "0",
+              "2/3",
+              "-2/3",
+              "0"
+            ],
+            "gap": "0",
+            "penalty": "4/3",
+            "prediction": [
+              "1",
+              "1/3",
+              "-1/3",
+              "-1"
+            ],
+            "primal": "20/9",
+            "residual": [
+              "0",
+              "8/3",
+              "-8/3",
+              "0"
+            ],
+            "slacks": [
+              "4/3",
+              "0",
+              "8/3",
+              "1/3"
+            ],
+            "tight_constraints": [
+              1
+            ]
+          },
+          {
+            "coefficients": [
+              "0",
+              "0"
+            ],
+            "correlations": [
+              "2",
+              "3"
+            ],
+            "dual": "5/2",
+            "dual_vector": [
+              "1/4",
+              "3/4",
+              "-3/4",
+              "-1/4"
+            ],
+            "gap": "0",
+            "penalty": "3",
+            "prediction": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "primal": "5/2",
+            "residual": [
+              "1",
+              "3",
+              "-3",
+              "-1"
+            ],
+            "slacks": [
+              "3",
+              "1",
+              "5",
+              "0"
+            ],
+            "tight_constraints": [
+              3
+            ]
+          }
+        ],
+        "gram": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "5"
+          ]
+        ],
+        "impossible_constraints": [],
+        "interior": {
+          "coefficients": [
+            "0",
+            "1/6"
+          ],
+          "correlations": [
+            "5/3",
+            "13/6"
+          ],
+          "dual": "175/72",
+          "dual_vector": [
+            "1/8",
+            "17/24",
+            "-17/24",
+            "-1/8"
+          ],
+          "gap": "0",
+          "penalty": "13/6",
+          "prediction": [
+            "1/2",
+            "1/6",
+            "-1/6",
+            "-1/2"
+          ],
+          "primal": "175/72",
+          "residual": [
+            "1/2",
+            "17/6",
+            "-17/6",
+            "-1/2"
+          ],
+          "slacks": [
+            "13/6",
+            "1/2",
+            "23/6",
+            "1/6"
+          ],
+          "tight_constraints": []
+        },
+        "lower": "4/3",
+        "schema_version": 1,
+        "scope": "one weak active/sign branch; not a general path-following solver",
+        "selected": [
+          1
+        ],
+        "signs": [
+          0,
+          1
+        ],
+        "status": "certified_segment",
+        "strict_selected_signs_at_probe": true,
+        "upper": "3",
+        "y": [
+          "1",
+          "3",
+          "-3",
+          "-1"
+        ]
+      },
+      {
+        "X": [
+          [
+            "1",
+            "3"
+          ],
+          [
+            "1",
+            "1"
+          ],
+          [
+            "-1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-3"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "certified": true,
+        "coefficient_intercepts": [
+          "4",
+          "-1"
+        ],
+        "coefficient_slopes": [
+          "-3",
+          "1"
+        ],
+        "constraints": [
+          {
+            "bound": "0",
+            "bound_type": "lower",
+            "feature": null,
+            "intercept": "0",
+            "kind": "nonnegative_lambda",
+            "slope": "1"
+          },
+          {
+            "bound": "4/3",
+            "bound_type": "upper",
+            "feature": 0,
+            "intercept": "4",
+            "kind": "selected_sign",
+            "slope": "-3"
+          },
+          {
+            "bound": "1",
+            "bound_type": "lower",
+            "feature": 1,
+            "intercept": "-1",
+            "kind": "selected_sign",
+            "slope": "1"
+          }
+        ],
+        "correlation_intercepts": [
+          "0",
+          "0"
+        ],
+        "correlation_slopes": [
+          "1",
+          "1"
+        ],
+        "cross": [
+          "2",
+          "3"
+        ],
+        "endpoints": [
+          {
+            "coefficients": [
+              "1",
+              "0"
+            ],
+            "correlations": [
+              "1",
+              "1"
+            ],
+            "dual": "2",
+            "dual_vector": [
+              "0",
+              "1/2",
+              "-1/2",
+              "0"
+            ],
+            "gap": "0",
+            "penalty": "1",
+            "prediction": [
+              "1",
+              "1",
+              "-1",
+              "-1"
+            ],
+            "primal": "2",
+            "residual": [
+              "0",
+              "2",
+              "-2",
+              "0"
+            ],
+            "slacks": [
+              "1",
+              "1",
+              "0"
+            ],
+            "tight_constraints": [
+              2
+            ]
+          },
+          {
+            "coefficients": [
+              "0",
+              "1/3"
+            ],
+            "correlations": [
+              "4/3",
+              "4/3"
+            ],
+            "dual": "20/9",
+            "dual_vector": [
+              "0",
+              "2/3",
+              "-2/3",
+              "0"
+            ],
+            "gap": "0",
+            "penalty": "4/3",
+            "prediction": [
+              "1",
+              "1/3",
+              "-1/3",
+              "-1"
+            ],
+            "primal": "20/9",
+            "residual": [
+              "0",
+              "8/3",
+              "-8/3",
+              "0"
+            ],
+            "slacks": [
+              "4/3",
+              "0",
+              "1/3"
+            ],
+            "tight_constraints": [
+              1
+            ]
+          }
+        ],
+        "gram": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "5"
+          ]
+        ],
+        "impossible_constraints": [],
+        "interior": {
+          "coefficients": [
+            "1/2",
+            "1/6"
+          ],
+          "correlations": [
+            "7/6",
+            "7/6"
+          ],
+          "dual": "77/36",
+          "dual_vector": [
+            "0",
+            "7/12",
+            "-7/12",
+            "0"
+          ],
+          "gap": "0",
+          "penalty": "7/6",
+          "prediction": [
+            "1",
+            "2/3",
+            "-2/3",
+            "-1"
+          ],
+          "primal": "77/36",
+          "residual": [
+            "0",
+            "7/3",
+            "-7/3",
+            "0"
+          ],
+          "slacks": [
+            "7/6",
+            "1/2",
+            "1/6"
+          ],
+          "tight_constraints": []
+        },
+        "lower": "1",
+        "schema_version": 1,
+        "scope": "one weak active/sign branch; not a general path-following solver",
+        "selected": [
+          0,
+          1
+        ],
+        "signs": [
+          1,
+          1
+        ],
+        "status": "certified_segment",
+        "strict_selected_signs_at_probe": true,
+        "upper": "4/3",
+        "y": [
+          "1",
+          "3",
+          "-3",
+          "-1"
+        ]
+      },
+      {
+        "X": [
+          [
+            "1",
+            "3"
+          ],
+          [
+            "1",
+            "1"
+          ],
+          [
+            "-1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-3"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "certified": true,
+        "coefficient_intercepts": [
+          "2",
+          "0"
+        ],
+        "coefficient_slopes": [
+          "-1",
+          "0"
+        ],
+        "constraints": [
+          {
+            "bound": "0",
+            "bound_type": "lower",
+            "feature": null,
+            "intercept": "0",
+            "kind": "nonnegative_lambda",
+            "slope": "1"
+          },
+          {
+            "bound": "2",
+            "bound_type": "upper",
+            "feature": 0,
+            "intercept": "2",
+            "kind": "selected_sign",
+            "slope": "-1"
+          },
+          {
+            "bound": "1",
+            "bound_type": "upper",
+            "feature": 1,
+            "intercept": "1",
+            "kind": "inactive_upper",
+            "slope": "-1"
+          },
+          {
+            "bound": "1/3",
+            "bound_type": "lower",
+            "feature": 1,
+            "intercept": "-1",
+            "kind": "inactive_lower",
+            "slope": "3"
+          }
+        ],
+        "correlation_intercepts": [
+          "0",
+          "-1"
+        ],
+        "correlation_slopes": [
+          "1",
+          "2"
+        ],
+        "cross": [
+          "2",
+          "3"
+        ],
+        "endpoints": [
+          {
+            "coefficients": [
+              "5/3",
+              "0"
+            ],
+            "correlations": [
+              "1/3",
+              "-1/3"
+            ],
+            "dual": "10/9",
+            "dual_vector": [
+              "-1/6",
+              "1/3",
+              "-1/3",
+              "1/6"
+            ],
+            "gap": "0",
+            "penalty": "1/3",
+            "prediction": [
+              "5/3",
+              "5/3",
+              "-5/3",
+              "-5/3"
+            ],
+            "primal": "10/9",
+            "residual": [
+              "-2/3",
+              "4/3",
+              "-4/3",
+              "2/3"
+            ],
+            "slacks": [
+              "1/3",
+              "5/3",
+              "2/3",
+              "0"
+            ],
+            "tight_constraints": [
+              3
+            ]
+          },
+          {
+            "coefficients": [
+              "1",
+              "0"
+            ],
+            "correlations": [
+              "1",
+              "1"
+            ],
+            "dual": "2",
+            "dual_vector": [
+              "0",
+              "1/2",
+              "-1/2",
+              "0"
+            ],
+            "gap": "0",
+            "penalty": "1",
+            "prediction": [
+              "1",
+              "1",
+              "-1",
+              "-1"
+            ],
+            "primal": "2",
+            "residual": [
+              "0",
+              "2",
+              "-2",
+              "0"
+            ],
+            "slacks": [
+              "1",
+              "1",
+              "0",
+              "2"
+            ],
+            "tight_constraints": [
+              2
+            ]
+          }
+        ],
+        "gram": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "5"
+          ]
+        ],
+        "impossible_constraints": [],
+        "interior": {
+          "coefficients": [
+            "4/3",
+            "0"
+          ],
+          "correlations": [
+            "2/3",
+            "1/3"
+          ],
+          "dual": "29/18",
+          "dual_vector": [
+            "-1/12",
+            "5/12",
+            "-5/12",
+            "1/12"
+          ],
+          "gap": "0",
+          "penalty": "2/3",
+          "prediction": [
+            "4/3",
+            "4/3",
+            "-4/3",
+            "-4/3"
+          ],
+          "primal": "29/18",
+          "residual": [
+            "-1/3",
+            "5/3",
+            "-5/3",
+            "1/3"
+          ],
+          "slacks": [
+            "2/3",
+            "4/3",
+            "1/3",
+            "1"
+          ],
+          "tight_constraints": []
+        },
+        "lower": "1/3",
+        "schema_version": 1,
+        "scope": "one weak active/sign branch; not a general path-following solver",
+        "selected": [
+          0
+        ],
+        "signs": [
+          1,
+          0
+        ],
+        "status": "certified_segment",
+        "strict_selected_signs_at_probe": true,
+        "upper": "1",
+        "y": [
+          "1",
+          "3",
+          "-3",
+          "-1"
+        ]
+      },
+      {
+        "X": [
+          [
+            "1",
+            "3"
+          ],
+          [
+            "1",
+            "1"
+          ],
+          [
+            "-1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-3"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "certified": true,
+        "coefficient_intercepts": [
+          "4",
+          "-1"
+        ],
+        "coefficient_slopes": [
+          "-7",
+          "3"
+        ],
+        "constraints": [
+          {
+            "bound": "0",
+            "bound_type": "lower",
+            "feature": null,
+            "intercept": "0",
+            "kind": "nonnegative_lambda",
+            "slope": "1"
+          },
+          {
+            "bound": "4/7",
+            "bound_type": "upper",
+            "feature": 0,
+            "intercept": "4",
+            "kind": "selected_sign",
+            "slope": "-7"
+          },
+          {
+            "bound": "1/3",
+            "bound_type": "upper",
+            "feature": 1,
+            "intercept": "1",
+            "kind": "selected_sign",
+            "slope": "-3"
+          }
+        ],
+        "correlation_intercepts": [
+          "0",
+          "0"
+        ],
+        "correlation_slopes": [
+          "1",
+          "-1"
+        ],
+        "cross": [
+          "2",
+          "3"
+        ],
+        "endpoints": [
+          {
+            "coefficients": [
+              "4",
+              "-1"
+            ],
+            "correlations": [
+              "0",
+              "0"
+            ],
+            "dual": "0",
+            "dual_vector": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "gap": "0",
+            "penalty": "0",
+            "prediction": [
+              "1",
+              "3",
+              "-3",
+              "-1"
+            ],
+            "primal": "0",
+            "residual": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "slacks": [
+              "0",
+              "4",
+              "1"
+            ],
+            "tight_constraints": [
+              0
+            ]
+          },
+          {
+            "coefficients": [
+              "5/3",
+              "0"
+            ],
+            "correlations": [
+              "1/3",
+              "-1/3"
+            ],
+            "dual": "10/9",
+            "dual_vector": [
+              "-1/6",
+              "1/3",
+              "-1/3",
+              "1/6"
+            ],
+            "gap": "0",
+            "penalty": "1/3",
+            "prediction": [
+              "5/3",
+              "5/3",
+              "-5/3",
+              "-5/3"
+            ],
+            "primal": "10/9",
+            "residual": [
+              "-2/3",
+              "4/3",
+              "-4/3",
+              "2/3"
+            ],
+            "slacks": [
+              "1/3",
+              "5/3",
+              "0"
+            ],
+            "tight_constraints": [
+              2
+            ]
+          }
+        ],
+        "gram": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "5"
+          ]
+        ],
+        "impossible_constraints": [],
+        "interior": {
+          "coefficients": [
+            "17/6",
+            "-1/2"
+          ],
+          "correlations": [
+            "1/6",
+            "-1/6"
+          ],
+          "dual": "25/36",
+          "dual_vector": [
+            "-1/12",
+            "1/6",
+            "-1/6",
+            "1/12"
+          ],
+          "gap": "0",
+          "penalty": "1/6",
+          "prediction": [
+            "4/3",
+            "7/3",
+            "-7/3",
+            "-4/3"
+          ],
+          "primal": "25/36",
+          "residual": [
+            "-1/3",
+            "2/3",
+            "-2/3",
+            "1/3"
+          ],
+          "slacks": [
+            "1/6",
+            "17/6",
+            "1/2"
+          ],
+          "tight_constraints": []
+        },
+        "lower": "0",
+        "schema_version": 1,
+        "scope": "one weak active/sign branch; not a general path-following solver",
+        "selected": [
+          0,
+          1
+        ],
+        "signs": [
+          1,
+          -1
+        ],
+        "status": "certified_segment",
+        "strict_selected_signs_at_probe": true,
+        "upper": "1/3",
+        "y": [
+          "1",
+          "3",
+          "-3",
+          "-1"
+        ]
+      }
+    ],
+    "y": [
+      1,
+      3,
+      -3,
+      -1
+    ]
+  },
+  "duplicate_branches": [
+    {
+      "X": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1"
+        ]
+      ],
+      "arithmetic": "exact rational representation of validated binary64 inputs",
+      "certified": true,
+      "coefficient_intercepts": [
+        "2",
+        "0"
+      ],
+      "coefficient_slopes": [
+        "-1",
+        "0"
+      ],
+      "constraints": [
+        {
+          "bound": "0",
+          "bound_type": "lower",
+          "feature": null,
+          "intercept": "0",
+          "kind": "nonnegative_lambda",
+          "slope": "1"
+        },
+        {
+          "bound": "2",
+          "bound_type": "upper",
+          "feature": 0,
+          "intercept": "2",
+          "kind": "selected_sign",
+          "slope": "-1"
+        },
+        {
+          "bound": null,
+          "bound_type": "constant",
+          "feature": 1,
+          "intercept": "0",
+          "kind": "inactive_upper",
+          "slope": "0"
+        },
+        {
+          "bound": "0",
+          "bound_type": "lower",
+          "feature": 1,
+          "intercept": "0",
+          "kind": "inactive_lower",
+          "slope": "2"
+        }
+      ],
+      "correlation_intercepts": [
+        "0",
+        "0"
+      ],
+      "correlation_slopes": [
+        "1",
+        "1"
+      ],
+      "cross": [
+        "2",
+        "2"
+      ],
+      "endpoints": [
+        {
+          "coefficients": [
+            "2",
+            "0"
+          ],
+          "correlations": [
+            "0",
+            "0"
+          ],
+          "dual": "0",
+          "dual_vector": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "gap": "0",
+          "penalty": "0",
+          "prediction": [
+            "2",
+            "2",
+            "-2",
+            "-2"
+          ],
+          "primal": "0",
+          "residual": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "slacks": [
+            "0",
+            "2",
+            "0",
+            "0"
+          ],
+          "tight_constraints": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "coefficients": [
+            "0",
+            "0"
+          ],
+          "correlations": [
+            "2",
+            "2"
+          ],
+          "dual": "2",
+          "dual_vector": [
+            "1/2",
+            "1/2",
+            "-1/2",
+            "-1/2"
+          ],
+          "gap": "0",
+          "penalty": "2",
+          "prediction": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "primal": "2",
+          "residual": [
+            "2",
+            "2",
+            "-2",
+            "-2"
+          ],
+          "slacks": [
+            "2",
+            "0",
+            "0",
+            "4"
+          ],
+          "tight_constraints": [
+            1,
+            2
+          ]
+        }
+      ],
+      "gram": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "impossible_constraints": [],
+      "interior": {
+        "coefficients": [
+          "1",
+          "0"
+        ],
+        "correlations": [
+          "1",
+          "1"
+        ],
+        "dual": "3/2",
+        "dual_vector": [
+          "1/4",
+          "1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        "gap": "0",
+        "penalty": "1",
+        "prediction": [
+          "1",
+          "1",
+          "-1",
+          "-1"
+        ],
+        "primal": "3/2",
+        "residual": [
+          "1",
+          "1",
+          "-1",
+          "-1"
+        ],
+        "slacks": [
+          "1",
+          "1",
+          "0",
+          "2"
+        ],
+        "tight_constraints": [
+          2
+        ]
+      },
+      "lower": "0",
+      "schema_version": 1,
+      "scope": "one weak active/sign branch; not a general path-following solver",
+      "selected": [
+        0
+      ],
+      "signs": [
+        1,
+        0
+      ],
+      "status": "certified_segment",
+      "strict_selected_signs_at_probe": true,
+      "upper": "2",
+      "y": [
+        "2",
+        "2",
+        "-2",
+        "-2"
+      ]
+    },
+    {
+      "X": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1"
+        ]
+      ],
+      "arithmetic": "exact rational representation of validated binary64 inputs",
+      "certified": true,
+      "coefficient_intercepts": [
+        "0",
+        "2"
+      ],
+      "coefficient_slopes": [
+        "0",
+        "-1"
+      ],
+      "constraints": [
+        {
+          "bound": "0",
+          "bound_type": "lower",
+          "feature": null,
+          "intercept": "0",
+          "kind": "nonnegative_lambda",
+          "slope": "1"
+        },
+        {
+          "bound": null,
+          "bound_type": "constant",
+          "feature": 0,
+          "intercept": "0",
+          "kind": "inactive_upper",
+          "slope": "0"
+        },
+        {
+          "bound": "0",
+          "bound_type": "lower",
+          "feature": 0,
+          "intercept": "0",
+          "kind": "inactive_lower",
+          "slope": "2"
+        },
+        {
+          "bound": "2",
+          "bound_type": "upper",
+          "feature": 1,
+          "intercept": "2",
+          "kind": "selected_sign",
+          "slope": "-1"
+        }
+      ],
+      "correlation_intercepts": [
+        "0",
+        "0"
+      ],
+      "correlation_slopes": [
+        "1",
+        "1"
+      ],
+      "cross": [
+        "2",
+        "2"
+      ],
+      "endpoints": [
+        {
+          "coefficients": [
+            "0",
+            "2"
+          ],
+          "correlations": [
+            "0",
+            "0"
+          ],
+          "dual": "0",
+          "dual_vector": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "gap": "0",
+          "penalty": "0",
+          "prediction": [
+            "2",
+            "2",
+            "-2",
+            "-2"
+          ],
+          "primal": "0",
+          "residual": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "slacks": [
+            "0",
+            "0",
+            "0",
+            "2"
+          ],
+          "tight_constraints": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "coefficients": [
+            "0",
+            "0"
+          ],
+          "correlations": [
+            "2",
+            "2"
+          ],
+          "dual": "2",
+          "dual_vector": [
+            "1/2",
+            "1/2",
+            "-1/2",
+            "-1/2"
+          ],
+          "gap": "0",
+          "penalty": "2",
+          "prediction": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "primal": "2",
+          "residual": [
+            "2",
+            "2",
+            "-2",
+            "-2"
+          ],
+          "slacks": [
+            "2",
+            "0",
+            "4",
+            "0"
+          ],
+          "tight_constraints": [
+            1,
+            3
+          ]
+        }
+      ],
+      "gram": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "impossible_constraints": [],
+      "interior": {
+        "coefficients": [
+          "0",
+          "1"
+        ],
+        "correlations": [
+          "1",
+          "1"
+        ],
+        "dual": "3/2",
+        "dual_vector": [
+          "1/4",
+          "1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        "gap": "0",
+        "penalty": "1",
+        "prediction": [
+          "1",
+          "1",
+          "-1",
+          "-1"
+        ],
+        "primal": "3/2",
+        "residual": [
+          "1",
+          "1",
+          "-1",
+          "-1"
+        ],
+        "slacks": [
+          "1",
+          "0",
+          "2",
+          "1"
+        ],
+        "tight_constraints": [
+          1
+        ]
+      },
+      "lower": "0",
+      "schema_version": 1,
+      "scope": "one weak active/sign branch; not a general path-following solver",
+      "selected": [
+        1
+      ],
+      "signs": [
+        0,
+        1
+      ],
+      "status": "certified_segment",
+      "strict_selected_signs_at_probe": true,
+      "upper": "2",
+      "y": [
+        "2",
+        "2",
+        "-2",
+        "-2"
+      ]
+    }
+  ],
+  "infeasible": {
+    "X": [
+      [
+        "1",
+        "3"
+      ],
+      [
+        "1",
+        "1"
+      ],
+      [
+        "-1",
+        "-1"
+      ],
+      [
+        "-1",
+        "-3"
+      ]
+    ],
+    "arithmetic": "exact rational representation of validated binary64 inputs",
+    "certified": false,
+    "coefficient_intercepts": [
+      "4",
+      "-1"
+    ],
+    "coefficient_slopes": [
+      "7",
+      "-3"
+    ],
+    "constraints": [
+      {
+        "bound": "0",
+        "bound_type": "lower",
+        "feature": null,
+        "intercept": "0",
+        "kind": "nonnegative_lambda",
+        "slope": "1"
+      },
+      {
+        "bound": "-4/7",
+        "bound_type": "upper",
+        "feature": 0,
+        "intercept": "-4",
+        "kind": "selected_sign",
+        "slope": "-7"
+      },
+      {
+        "bound": "-1/3",
+        "bound_type": "upper",
+        "feature": 1,
+        "intercept": "-1",
+        "kind": "selected_sign",
+        "slope": "-3"
+      }
+    ],
+    "correlation_intercepts": [
+      "0",
+      "0"
+    ],
+    "correlation_slopes": [
+      "-1",
+      "1"
+    ],
+    "cross": [
+      "2",
+      "3"
+    ],
+    "gram": [
+      [
+        "1",
+        "2"
+      ],
+      [
+        "2",
+        "5"
+      ]
+    ],
+    "impossible_constraints": [],
+    "lower": "0",
+    "schema_version": 1,
+    "scope": "one weak active/sign branch; not a general path-following solver",
+    "selected": [
+      0,
+      1
+    ],
+    "signs": [
+      -1,
+      1
+    ],
+    "status": "infeasible_sign_pattern",
+    "upper": "-4/7",
+    "y": [
+      "1",
+      "3",
+      "-3",
+      "-1"
+    ]
+  },
+  "schema_version": 1,
+  "scope": "developed supplied fixtures, not causal feature selection",
+  "singleton": {
+    "X": [
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "arithmetic": "exact rational representation of validated binary64 inputs",
+    "certified": true,
+    "coefficient_intercepts": [
+      "0",
+      "0"
+    ],
+    "coefficient_slopes": [
+      "-1",
+      "0"
+    ],
+    "constraints": [
+      {
+        "bound": "0",
+        "bound_type": "lower",
+        "feature": null,
+        "intercept": "0",
+        "kind": "nonnegative_lambda",
+        "slope": "1"
+      },
+      {
+        "bound": "0",
+        "bound_type": "upper",
+        "feature": 0,
+        "intercept": "0",
+        "kind": "selected_sign",
+        "slope": "-1"
+      },
+      {
+        "bound": null,
+        "bound_type": "constant",
+        "feature": 1,
+        "intercept": "0",
+        "kind": "inactive_upper",
+        "slope": "0"
+      },
+      {
+        "bound": "0",
+        "bound_type": "lower",
+        "feature": 1,
+        "intercept": "0",
+        "kind": "inactive_lower",
+        "slope": "2"
+      }
+    ],
+    "correlation_intercepts": [
+      "0",
+      "0"
+    ],
+    "correlation_slopes": [
+      "1",
+      "1"
+    ],
+    "cross": [
+      "0",
+      "0"
+    ],
+    "endpoints": [
+      {
+        "coefficients": [
+          "0",
+          "0"
+        ],
+        "correlations": [
+          "0",
+          "0"
+        ],
+        "dual": "0",
+        "dual_vector": [
+          "0"
+        ],
+        "gap": "0",
+        "penalty": "0",
+        "prediction": [
+          "0"
+        ],
+        "primal": "0",
+        "residual": [
+          "0"
+        ],
+        "slacks": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "tight_constraints": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "gram": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "impossible_constraints": [],
+    "interior": {
+      "coefficients": [
+        "0",
+        "0"
+      ],
+      "correlations": [
+        "0",
+        "0"
+      ],
+      "dual": "0",
+      "dual_vector": [
+        "0"
+      ],
+      "gap": "0",
+      "penalty": "0",
+      "prediction": [
+        "0"
+      ],
+      "primal": "0",
+      "residual": [
+        "0"
+      ],
+      "slacks": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "tight_constraints": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "lower": "0",
+    "schema_version": 1,
+    "scope": "one weak active/sign branch; not a general path-following solver",
+    "selected": [
+      0
+    ],
+    "signs": [
+      1,
+      0
+    ],
+    "status": "certified_point",
+    "strict_selected_signs_at_probe": false,
+    "upper": "0",
+    "y": [
+      "0"
+    ]
+  },
+  "singular": {
+    "X": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ],
+      [
+        "-1",
+        "-1"
+      ],
+      [
+        "-1",
+        "-1"
+      ]
+    ],
+    "arithmetic": "exact rational representation of validated binary64 inputs",
+    "certified": false,
+    "cross": [
+      "2",
+      "2"
+    ],
+    "gram": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "reason": "selected Gram is singular; no ridge, pseudoinverse or full-path claim",
+    "schema_version": 1,
+    "scope": "one weak active/sign branch; not a general path-following solver",
+    "selected": [
+      0,
+      1
+    ],
+    "signs": [
+      1,
+      1
+    ],
+    "status": "singular_active_gram",
+    "y": [
+      "2",
+      "2",
+      "-2",
+      "-2"
+    ]
+  }
+}
