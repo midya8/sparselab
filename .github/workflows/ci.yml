@@ -23,6 +23,10 @@ jobs:
           cmp /tmp/screen-demo.json examples/screen-demo.json
           python -m sparselab screen examples/screen-input.json > /tmp/screen-input.json
           python examples/render_screening.py --check
+          python -m sparselab branch-demo > /tmp/branch-demo.json
+          cmp /tmp/branch-demo.json examples/branch-demo.json
+          python -m sparselab branch examples/branch-input.json > /tmp/branch-input.json
+          python examples/render_branches.py --check
   package:
     runs-on: ubuntu-latest
     steps:
@@ -36,6 +40,8 @@ jobs:
           python -m sparselab path examples/input.json > /tmp/source-input.json
           python -m sparselab screen-demo > /tmp/source-screen-demo.json
           python -m sparselab screen examples/screen-input.json > /tmp/source-screen-input.json
+          python -m sparselab branch-demo > /tmp/source-branch-demo.json
+          python -m sparselab branch examples/branch-input.json > /tmp/source-branch-input.json
           python -m pip install --no-deps --target /tmp/installed /tmp/wheels/*.whl
           cd /tmp
           PYTHONPATH=/tmp/installed python -m sparselab demo > /tmp/wheel-demo.json
@@ -46,3 +52,7 @@ jobs:
           PYTHONPATH=/tmp/installed python -m sparselab screen "$GITHUB_WORKSPACE/examples/screen-input.json" > /tmp/wheel-screen-input.json
           cmp /tmp/source-screen-demo.json /tmp/wheel-screen-demo.json
           cmp /tmp/source-screen-input.json /tmp/wheel-screen-input.json
+          PYTHONPATH=/tmp/installed python -m sparselab branch-demo > /tmp/wheel-branch-demo.json
+          PYTHONPATH=/tmp/installed python -m sparselab branch "$GITHUB_WORKSPACE/examples/branch-input.json" > /tmp/wheel-branch-input.json
+          cmp /tmp/source-branch-demo.json /tmp/wheel-branch-demo.json
+          cmp /tmp/source-branch-input.json /tmp/wheel-branch-input.json
