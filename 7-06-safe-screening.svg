@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1080" viewBox="0 0 1120 1080"><rect width="1120" height="1080" fill="#f4efec"/><rect x="16" y="16" width="1088" height="1048" rx="22" fill="white"/><g font-family="Arial,sans-serif">
+<metadata id="full-screen-report" data-encoding="zlib-base64-json">eNrtmt2XojYUwP8VDk/9kCMJomhf29OXnn3py57umeVEjE5aBJuE6drV/703HyCKKKM7s7qdhxkgJDf3I/f+CPLZTfJM8jwV7uTDZ5d+Iol0J59dwpl8XFLJEndiWh1OJMszkjqcrjgVNJO6wcnnzhNJ2YxIOnOmLCN8PRw4LFsVUrg9JV+wGeV05k7wqOfm0z9pItkTFTFZcErdieQF7bkgc8YSJfHghkge6ZLET5QLuOlOEDSxbFGkhMeCLbJ4RaSkPAML/J77D5MZFSJO8iKTurNtocZCoueGU7+HHpR2dD5nCQNr1H131B+Azh7qYzj4ru7BOU21qboHKnuoA+pHqs9Od9Uj1LfGpp89qDbdkS1JCi6NUB/hyN0+bHtuRpagkPtbngvqMDAFPOkqu8EJmQrGe5AKE6v59N9Dz1x59p+69srb9Wvb+AAzf8mA7rvM156qvJUlaWEC5Qoyp/G/lOcO9OWMCpCbMfEIshwK8Vw7+UqyJYMualL5yIRjVBMyB5d6ek6nWjE/OVku44RyyeYMdIPu0ACiYH1lCVUydHiZXIM+s0J7ehCMw36Extg2xS0BDfoB1hEd6kjprnNKBJum1VLUjSIhqkXH3jY9gX4518Jg5YRDaMfliYeD8mysT0A4yJUFtytyStI0hqgvlcxBEMIS9MeqfwJeo7yur551oGOQFsssznK+jMXfBdHZ5ao7LJvRTzoTloQvmBqigmMuan1VIwfztNA9t6qlVwbOncxJKlQSQvwSGYuUJH/BAK+m6Lb3XBtKX5+1AtWsCM2YhiE47CMfD641B19ujl4yHazBNWtQaAY1zQF77GRX2BOEQWDcsoXltiCryhCbCSB20DsQrGtiDz/UajQM22zW3ntnSiXZbD7i/nf43ffOj86KQuGQ6x82G3MnVpUGZgngv7lVrdX94rirFrZiVCURjwNdE8FwMmOFqDnFqI6GQWTiDEDRya3zLTLZFtlci0ym6bpc9mzkPDYZXyvhNZ9+eDgKnfW5+bZq6bwR9OsR9B0lvAdIyDRzwI9G0/tB6Z7vkCp4N4lUhAGp2B9EZ5BqDoG1owNRmzwtSwIqTzw0tmem5RRNw36I8I2D1Oh4CJ2TmnsdVUe3p3pX8OPLwG81tOoIuW+GLYb7VqDwkJOV2FZGviwhB8gYPLJHb2S95gVjm0pVEUSBX2Vig5q7OzVglo+5pUw0NidllrYi82hO16mJ37B5n9j8RXuZqXRlOXd0OO+UmTe6B7VO70JLG9iLYIlqqaxDH9SfI1ox6d82Iv0GYvwbJ+MzNDYF8XlbRz2kobLdhV7FQiViB0L/6zHwGZXsCPj8w01i3zwvRkZMtEuzbrQ7skV8g901sENhPRYttDNP+/VoHVsjYd/WOnxsjQyCFtpNQfEZ+PDeaHfUc7f3yvU07pqRvQZ35WNycD3uorvDXfTN4+5lFO4GuS/7MjRyryhhnTFn0yvoiLlmLr69CdWUQ7iBOXwCc7h1T+eX25PWPV3tYeOiPZ2CgfJ4pQ46qo5SpLZbell1asT9uVilLIGQOmQ5ZYvCsOI8cdsAu3ftvc7+cj+ItwbcsH9mc7kf0oto6+9qC9o9fPwPNpV3t6fsugv+Nil72WbSZNBZxJokwAcvnM7sIveTryNejdKoHItqar8GXccvC9fhc7aQJ8jayjC/iS4zZnQQeKTfktVx9Ycq5iZ5WjDlV4jyX+HbmuBGfwS0rxdPLHz/mg9p6o+krZQZwcPxRZ/K4Nf7hc/o2Ll6+606+8dhY8w88j4QDa9+H6gUr4p4+TtUptHRKORXFXHc7buRvcw13Ro1u1SzXrfVNT77RYh/WJ/RiQJtRW63x/uIJF/Rqhzs5d2vZOX8DrM4pJgxKXo62USewnDIs4SmlNtiwZ2EFAKqiKlCUEzd7X9YpyIL</metadata>
+<text x="48" y="62" font-size="30" fill="#251f21" font-weight="600" >SparseLab / safe zeros need a strict certificate</text>
+<text x="48" y="94" font-size="18" fill="#585254" font-weight="400" >Exact rational Gap Safe sphere tests for the stored binary64-input LASSO problem.</text>
+<text x="48" y="137" font-size="21" fill="#251f21" font-weight="600" >1  A zero coefficient is not the same as a safely screened feature</text>
+<text x="58" y="181" font-size="17" fill="#585254" font-weight="400" >Supplied iterate / control</text>
+<text x="430" y="181" font-size="17" fill="#585254" font-weight="400" >Exact gap</text>
+<text x="635" y="181" font-size="17" fill="#585254" font-weight="400" >Radius squared</text>
+<text x="860" y="181" font-size="17" fill="#585254" font-weight="400" >Safe-zero indices</text>
+<text x="58" y="220" font-size="17" fill="#251f21" font-weight="400" >Loose iterate</text>
+<text x="430" y="220" font-size="17" fill="#251f21" font-weight="400" id="control-0-0">14357/8192</text>
+<text x="635" y="220" font-size="17" fill="#251f21" font-weight="400" id="control-0-1">14357/16384</text>
+<text x="860" y="220" font-size="17" fill="#251f21" font-weight="400" id="control-0-2">[]</text>
+<text x="58" y="263" font-size="17" fill="#251f21" font-weight="400" >Near, nonzero inactive</text>
+<text x="430" y="263" font-size="17" fill="#251f21" font-weight="400" id="control-1-0">5/1024</text>
+<text x="635" y="263" font-size="17" fill="#251f21" font-weight="400" id="control-1-1">5/2048</text>
+<text x="860" y="263" font-size="17" fill="#317e6b" font-weight="600" id="control-1-2">[2]</text>
+<text x="58" y="306" font-size="17" fill="#251f21" font-weight="400" >Exact interior zero</text>
+<text x="430" y="306" font-size="17" fill="#251f21" font-weight="400" id="control-2-0">0</text>
+<text x="635" y="306" font-size="17" fill="#251f21" font-weight="400" id="control-2-1">0</text>
+<text x="860" y="306" font-size="17" fill="#317e6b" font-weight="600" id="control-2-2">[2]</text>
+<text x="58" y="349" font-size="17" fill="#251f21" font-weight="400" >Exact boundary zero</text>
+<text x="430" y="349" font-size="17" fill="#251f21" font-weight="400" id="control-3-0">0</text>
+<text x="635" y="349" font-size="17" fill="#251f21" font-weight="400" id="control-3-1">0</text>
+<text x="860" y="349" font-size="17" fill="#251f21" font-weight="400" id="control-3-2">[]</text>
+<text x="58" y="392" font-size="17" fill="#251f21" font-weight="400" >Duplicate ambiguity</text>
+<text x="430" y="392" font-size="17" fill="#251f21" font-weight="400" id="control-4-0">0</text>
+<text x="635" y="392" font-size="17" fill="#251f21" font-weight="400" id="control-4-1">0</text>
+<text x="860" y="392" font-size="17" fill="#251f21" font-weight="400" id="control-4-2">[]</text>
+<text x="58" y="435" font-size="17" fill="#251f21" font-weight="400" >Zero column</text>
+<text x="430" y="435" font-size="17" fill="#251f21" font-weight="400" id="control-5-0">73/32</text>
+<text x="635" y="435" font-size="17" fill="#251f21" font-weight="400" id="control-5-1">73/32</text>
+<text x="860" y="435" font-size="17" fill="#317e6b" font-weight="600" id="control-5-2">[1]</text>
+<text x="48" y="501" font-size="18" fill="#251f21" font-weight="600" >Near iterate has beta 2 = 1/32, yet column 2 is certified zero in every optimum.</text>
+<text x="48" y="532" font-size="18" fill="#585254" font-weight="400" >At the exact boundary optimum beta 2 = 0, but the strict test cannot certify it.</text>
+<text x="48" y="575" font-size="21" fill="#251f21" font-weight="600" >2  Square-root-free witness for the near iterate (lambda = 1/4)</text>
+<text x="58" y="615" font-size="16" fill="#585254" font-weight="400" >Feature</text>
+<text x="250" y="615" font-size="16" fill="#585254" font-weight="400" >Norm squared * R squared</text>
+<text x="575" y="615" font-size="16" fill="#585254" font-weight="400" >Margin squared</text>
+<text x="835" y="615" font-size="16" fill="#585254" font-weight="400" >Strict slack</text>
+<text x="58" y="652" font-size="17" fill="#251f21" font-weight="400" >0</text>
+<text x="250" y="652" font-size="17" fill="#251f21" font-weight="400" id="near-0-0">5/512</text>
+<text x="575" y="652" font-size="17" fill="#251f21" font-weight="400" id="near-0-1">0</text>
+<text x="835" y="652" font-size="17" fill="#251f21" font-weight="400" id="near-0-2">-5/512</text>
+<text x="58" y="689" font-size="17" fill="#251f21" font-weight="400" >1</text>
+<text x="250" y="689" font-size="17" fill="#251f21" font-weight="400" id="near-1-0">5/512</text>
+<text x="575" y="689" font-size="17" fill="#251f21" font-weight="400" id="near-1-1">0</text>
+<text x="835" y="689" font-size="17" fill="#251f21" font-weight="400" id="near-1-2">-5/512</text>
+<text x="58" y="726" font-size="17" fill="#251f21" font-weight="400" >2</text>
+<text x="250" y="726" font-size="17" fill="#317e6b" font-weight="600" id="near-2-0">5/512</text>
+<text x="575" y="726" font-size="17" fill="#317e6b" font-weight="600" id="near-2-1">25/1024</text>
+<text x="835" y="726" font-size="17" fill="#317e6b" font-weight="600" id="near-2-2">15/1024</text>
+<text x="58" y="803" font-size="17" fill="#585254" font-weight="400" >Ball term</text>
+<rect id="bound-bar-0" x="250" y="782" width="175.781250" height="26" fill="#b5b0b2"/>
+<text x="740" y="803" font-size="17" fill="#251f21" font-weight="400" >5/512</text>
+<text x="58" y="850" font-size="17" fill="#585254" font-weight="400" >Margin squared</text>
+<rect id="bound-bar-1" x="250" y="829" width="439.453125" height="26" fill="#317e6b"/>
+<text x="740" y="850" font-size="17" fill="#251f21" font-weight="600" >25/1024</text>
+<text x="48" y="898" font-size="18" fill="#251f21" font-weight="600" >This test certifies zero when margin &gt; 0 and ball_term &lt; margin_squared.</text>
+<text x="48" y="930" font-size="17" fill="#585254" font-weight="400" >R squared = 2 * exact_gap / N. Strict equality is not enough; no rounded square root.</text>
+<text x="48" y="963" font-size="17" fill="#585254" font-weight="400" >Duplicate features remain uncertified: either copy can carry an optimal nonzero coefficient.</text>
+<text x="48" y="995" font-size="17" fill="#585254" font-weight="400" >This audits iterates; no coordinates are dropped from the solver and no speedup is claimed.</text>
+<line x1="48" y1="1020" x2="1072" y2="1020" stroke="#eae9ea"/>
+<text x="48" y="1044" font-size="15" fill="#585254" font-weight="400" >Reproduce: python examples/render_screening.py --check | full exact witnesses embedded</text>
+</g></svg>

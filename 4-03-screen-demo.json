@@ -1,0 +1,916 @@
+{
+  "controls": [
+    {
+      "exact": {
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "considered": 27,
+        "objectives_agree": true,
+        "predictions_agree": true,
+        "schema_version": 1,
+        "singular_sign_patterns": 0,
+        "witness_count": 1,
+        "witnesses": [
+          {
+            "active": [
+              0,
+              1
+            ],
+            "coefficients": [
+              "7/4",
+              "-1/2",
+              "0"
+            ],
+            "correlations": [
+              "1/4",
+              "-1/4",
+              "1/8"
+            ],
+            "prediction": [
+              "5/4",
+              "9/4",
+              "-9/4",
+              "-5/4"
+            ],
+            "primal": "81/128"
+          }
+        ]
+      },
+      "name": "Loose iterate",
+      "screen": {
+        "X": [
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "-1",
+            "-1"
+          ],
+          [
+            "-1",
+            "1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-1",
+            "1"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "coefficients": [
+          "0",
+          "0",
+          "0"
+        ],
+        "conclusion": "safe_zero entries vanish in every optimizer of this exact stored-input objective; not_certified is not evidence of activity",
+        "dual": "4395/8192",
+        "dual_correlations": [
+          "1/4",
+          "-3/32",
+          "1/64"
+        ],
+        "dual_feasible": true,
+        "dual_scale": "1/8",
+        "dual_vector": [
+          "11/256",
+          "21/256",
+          "-23/256",
+          "-9/256"
+        ],
+        "features": [
+          {
+            "ball_term": "14357/4096",
+            "center_correlation": "1/4",
+            "column_norm_squared": "4",
+            "index": 0,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "-14357/4096"
+          },
+          {
+            "ball_term": "14357/4096",
+            "center_correlation": "-3/32",
+            "column_norm_squared": "4",
+            "index": 1,
+            "margin": "5/32",
+            "margin_squared": "25/1024",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "-14257/4096"
+          },
+          {
+            "ball_term": "14357/4096",
+            "center_correlation": "1/64",
+            "column_norm_squared": "4",
+            "index": 2,
+            "margin": "15/64",
+            "margin_squared": "225/4096",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "-3533/1024"
+          }
+        ],
+        "gap": "14357/8192",
+        "n": 4,
+        "not_certified": [
+          0,
+          1,
+          2
+        ],
+        "objective": "||y-X beta||^2/(2N) + penalty*||beta||_1",
+        "p": 3,
+        "penalty": "1/4",
+        "prediction": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "primal": "293/128",
+        "radius_squared": "14357/16384",
+        "residual": [
+          "11/8",
+          "21/8",
+          "-23/8",
+          "-9/8"
+        ],
+        "residual_correlations": [
+          "2",
+          "-3/4",
+          "1/8"
+        ],
+        "safe_zero": [],
+        "schema_version": 1,
+        "y": [
+          "11/8",
+          "21/8",
+          "-23/8",
+          "-9/8"
+        ]
+      }
+    },
+    {
+      "exact": {
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "considered": 27,
+        "objectives_agree": true,
+        "predictions_agree": true,
+        "schema_version": 1,
+        "singular_sign_patterns": 0,
+        "witness_count": 1,
+        "witnesses": [
+          {
+            "active": [
+              0,
+              1
+            ],
+            "coefficients": [
+              "7/4",
+              "-1/2",
+              "0"
+            ],
+            "correlations": [
+              "1/4",
+              "-1/4",
+              "1/8"
+            ],
+            "prediction": [
+              "5/4",
+              "9/4",
+              "-9/4",
+              "-5/4"
+            ],
+            "primal": "81/128"
+          }
+        ]
+      },
+      "name": "Near, nonzero inactive",
+      "screen": {
+        "X": [
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "-1",
+            "-1"
+          ],
+          [
+            "-1",
+            "1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-1",
+            "1"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "coefficients": [
+          "7/4",
+          "-1/2",
+          "1/32"
+        ],
+        "conclusion": "safe_zero entries vanish in every optimizer of this exact stored-input objective; not_certified is not evidence of activity",
+        "dual": "1295/2048",
+        "dual_correlations": [
+          "1/4",
+          "-1/4",
+          "3/32"
+        ],
+        "dual_feasible": true,
+        "dual_scale": "1",
+        "dual_vector": [
+          "3/128",
+          "13/128",
+          "-19/128",
+          "3/128"
+        ],
+        "features": [
+          {
+            "ball_term": "5/512",
+            "center_correlation": "1/4",
+            "column_norm_squared": "4",
+            "index": 0,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "-5/512"
+          },
+          {
+            "ball_term": "5/512",
+            "center_correlation": "-1/4",
+            "column_norm_squared": "4",
+            "index": 1,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "-5/512"
+          },
+          {
+            "ball_term": "5/512",
+            "center_correlation": "3/32",
+            "column_norm_squared": "4",
+            "index": 2,
+            "margin": "5/32",
+            "margin_squared": "25/1024",
+            "reason": "strict_ball_test",
+            "safe_zero": true,
+            "strict_slack": "15/1024"
+          }
+        ],
+        "gap": "5/1024",
+        "n": 4,
+        "not_certified": [
+          0,
+          1
+        ],
+        "objective": "||y-X beta||^2/(2N) + penalty*||beta||_1",
+        "p": 3,
+        "penalty": "1/4",
+        "prediction": [
+          "41/32",
+          "71/32",
+          "-73/32",
+          "-39/32"
+        ],
+        "primal": "1305/2048",
+        "radius_squared": "5/2048",
+        "residual": [
+          "3/32",
+          "13/32",
+          "-19/32",
+          "3/32"
+        ],
+        "residual_correlations": [
+          "1/4",
+          "-1/4",
+          "3/32"
+        ],
+        "safe_zero": [
+          2
+        ],
+        "schema_version": 1,
+        "y": [
+          "11/8",
+          "21/8",
+          "-23/8",
+          "-9/8"
+        ]
+      }
+    },
+    {
+      "exact": {
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "considered": 27,
+        "objectives_agree": true,
+        "predictions_agree": true,
+        "schema_version": 1,
+        "singular_sign_patterns": 0,
+        "witness_count": 1,
+        "witnesses": [
+          {
+            "active": [
+              0,
+              1
+            ],
+            "coefficients": [
+              "7/4",
+              "-1/2",
+              "0"
+            ],
+            "correlations": [
+              "1/4",
+              "-1/4",
+              "1/8"
+            ],
+            "prediction": [
+              "5/4",
+              "9/4",
+              "-9/4",
+              "-5/4"
+            ],
+            "primal": "81/128"
+          }
+        ]
+      },
+      "name": "Exact interior zero",
+      "screen": {
+        "X": [
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "-1",
+            "-1"
+          ],
+          [
+            "-1",
+            "1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-1",
+            "1"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "coefficients": [
+          "7/4",
+          "-1/2",
+          "0"
+        ],
+        "conclusion": "safe_zero entries vanish in every optimizer of this exact stored-input objective; not_certified is not evidence of activity",
+        "dual": "81/128",
+        "dual_correlations": [
+          "1/4",
+          "-1/4",
+          "1/8"
+        ],
+        "dual_feasible": true,
+        "dual_scale": "1",
+        "dual_vector": [
+          "1/32",
+          "3/32",
+          "-5/32",
+          "1/32"
+        ],
+        "features": [
+          {
+            "ball_term": "0",
+            "center_correlation": "1/4",
+            "column_norm_squared": "4",
+            "index": 0,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "0"
+          },
+          {
+            "ball_term": "0",
+            "center_correlation": "-1/4",
+            "column_norm_squared": "4",
+            "index": 1,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "0"
+          },
+          {
+            "ball_term": "0",
+            "center_correlation": "1/8",
+            "column_norm_squared": "4",
+            "index": 2,
+            "margin": "1/8",
+            "margin_squared": "1/64",
+            "reason": "strict_ball_test",
+            "safe_zero": true,
+            "strict_slack": "1/64"
+          }
+        ],
+        "gap": "0",
+        "n": 4,
+        "not_certified": [
+          0,
+          1
+        ],
+        "objective": "||y-X beta||^2/(2N) + penalty*||beta||_1",
+        "p": 3,
+        "penalty": "1/4",
+        "prediction": [
+          "5/4",
+          "9/4",
+          "-9/4",
+          "-5/4"
+        ],
+        "primal": "81/128",
+        "radius_squared": "0",
+        "residual": [
+          "1/8",
+          "3/8",
+          "-5/8",
+          "1/8"
+        ],
+        "residual_correlations": [
+          "1/4",
+          "-1/4",
+          "1/8"
+        ],
+        "safe_zero": [
+          2
+        ],
+        "schema_version": 1,
+        "y": [
+          "11/8",
+          "21/8",
+          "-23/8",
+          "-9/8"
+        ]
+      }
+    },
+    {
+      "exact": {
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "considered": 27,
+        "objectives_agree": true,
+        "predictions_agree": true,
+        "schema_version": 1,
+        "singular_sign_patterns": 0,
+        "witness_count": 1,
+        "witnesses": [
+          {
+            "active": [
+              0,
+              1
+            ],
+            "coefficients": [
+              "15/8",
+              "-5/8",
+              "0"
+            ],
+            "correlations": [
+              "1/8",
+              "-1/8",
+              "1/8"
+            ],
+            "prediction": [
+              "5/4",
+              "5/2",
+              "-5/2",
+              "-5/4"
+            ],
+            "primal": "43/128"
+          }
+        ]
+      },
+      "name": "Exact boundary zero",
+      "screen": {
+        "X": [
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "-1",
+            "-1"
+          ],
+          [
+            "-1",
+            "1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-1",
+            "1"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "coefficients": [
+          "15/8",
+          "-5/8",
+          "0"
+        ],
+        "conclusion": "safe_zero entries vanish in every optimizer of this exact stored-input objective; not_certified is not evidence of activity",
+        "dual": "43/128",
+        "dual_correlations": [
+          "1/8",
+          "-1/8",
+          "1/8"
+        ],
+        "dual_feasible": true,
+        "dual_scale": "1",
+        "dual_vector": [
+          "1/32",
+          "1/32",
+          "-3/32",
+          "1/32"
+        ],
+        "features": [
+          {
+            "ball_term": "0",
+            "center_correlation": "1/8",
+            "column_norm_squared": "4",
+            "index": 0,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "0"
+          },
+          {
+            "ball_term": "0",
+            "center_correlation": "-1/8",
+            "column_norm_squared": "4",
+            "index": 1,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "0"
+          },
+          {
+            "ball_term": "0",
+            "center_correlation": "1/8",
+            "column_norm_squared": "4",
+            "index": 2,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "0"
+          }
+        ],
+        "gap": "0",
+        "n": 4,
+        "not_certified": [
+          0,
+          1,
+          2
+        ],
+        "objective": "||y-X beta||^2/(2N) + penalty*||beta||_1",
+        "p": 3,
+        "penalty": "1/8",
+        "prediction": [
+          "5/4",
+          "5/2",
+          "-5/2",
+          "-5/4"
+        ],
+        "primal": "43/128",
+        "radius_squared": "0",
+        "residual": [
+          "1/8",
+          "1/8",
+          "-3/8",
+          "1/8"
+        ],
+        "residual_correlations": [
+          "1/8",
+          "-1/8",
+          "1/8"
+        ],
+        "safe_zero": [],
+        "schema_version": 1,
+        "y": [
+          "11/8",
+          "21/8",
+          "-23/8",
+          "-9/8"
+        ]
+      }
+    },
+    {
+      "exact": {
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "considered": 27,
+        "objectives_agree": true,
+        "predictions_agree": true,
+        "schema_version": 1,
+        "singular_sign_patterns": 12,
+        "witness_count": 2,
+        "witnesses": [
+          {
+            "active": [
+              0,
+              2
+            ],
+            "coefficients": [
+              "7/4",
+              "0",
+              "-1/2"
+            ],
+            "correlations": [
+              "1/4",
+              "1/4",
+              "-1/4"
+            ],
+            "prediction": [
+              "5/4",
+              "9/4",
+              "-9/4",
+              "-5/4"
+            ],
+            "primal": "5/8"
+          },
+          {
+            "active": [
+              1,
+              2
+            ],
+            "coefficients": [
+              "0",
+              "7/4",
+              "-1/2"
+            ],
+            "correlations": [
+              "1/4",
+              "1/4",
+              "-1/4"
+            ],
+            "prediction": [
+              "5/4",
+              "9/4",
+              "-9/4",
+              "-5/4"
+            ],
+            "primal": "5/8"
+          }
+        ]
+      },
+      "name": "Duplicate ambiguity",
+      "screen": {
+        "X": [
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "1",
+            "-1"
+          ],
+          [
+            "-1",
+            "-1",
+            "1"
+          ],
+          [
+            "-1",
+            "-1",
+            "-1"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "coefficients": [
+          "7/4",
+          "0",
+          "-1/2"
+        ],
+        "conclusion": "safe_zero entries vanish in every optimizer of this exact stored-input objective; not_certified is not evidence of activity",
+        "dual": "5/8",
+        "dual_correlations": [
+          "1/4",
+          "1/4",
+          "-1/4"
+        ],
+        "dual_feasible": true,
+        "dual_scale": "1",
+        "dual_vector": [
+          "0",
+          "1/8",
+          "-1/8",
+          "0"
+        ],
+        "features": [
+          {
+            "ball_term": "0",
+            "center_correlation": "1/4",
+            "column_norm_squared": "4",
+            "index": 0,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "0"
+          },
+          {
+            "ball_term": "0",
+            "center_correlation": "1/4",
+            "column_norm_squared": "4",
+            "index": 1,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "0"
+          },
+          {
+            "ball_term": "0",
+            "center_correlation": "-1/4",
+            "column_norm_squared": "4",
+            "index": 2,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "0"
+          }
+        ],
+        "gap": "0",
+        "n": 4,
+        "not_certified": [
+          0,
+          1,
+          2
+        ],
+        "objective": "||y-X beta||^2/(2N) + penalty*||beta||_1",
+        "p": 3,
+        "penalty": "1/4",
+        "prediction": [
+          "5/4",
+          "9/4",
+          "-9/4",
+          "-5/4"
+        ],
+        "primal": "5/8",
+        "radius_squared": "0",
+        "residual": [
+          "0",
+          "1/2",
+          "-1/2",
+          "0"
+        ],
+        "residual_correlations": [
+          "1/4",
+          "1/4",
+          "-1/4"
+        ],
+        "safe_zero": [],
+        "schema_version": 1,
+        "y": [
+          "5/4",
+          "11/4",
+          "-11/4",
+          "-5/4"
+        ]
+      }
+    },
+    {
+      "exact": {
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "considered": 9,
+        "objectives_agree": true,
+        "predictions_agree": true,
+        "schema_version": 1,
+        "singular_sign_patterns": 6,
+        "witness_count": 1,
+        "witnesses": [
+          {
+            "active": [
+              0
+            ],
+            "coefficients": [
+              "7/4",
+              "0"
+            ],
+            "correlations": [
+              "1/4",
+              "0"
+            ],
+            "prediction": [
+              "7/4",
+              "7/4"
+            ],
+            "primal": "15/32"
+          }
+        ]
+      },
+      "name": "Zero column",
+      "screen": {
+        "X": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "arithmetic": "exact rational representation of validated binary64 inputs",
+        "coefficients": [
+          "0",
+          "3"
+        ],
+        "conclusion": "safe_zero entries vanish in every optimizer of this exact stored-input objective; not_certified is not evidence of activity",
+        "dual": "15/32",
+        "dual_correlations": [
+          "1/4",
+          "0"
+        ],
+        "dual_feasible": true,
+        "dual_scale": "1/8",
+        "dual_vector": [
+          "1/8",
+          "1/8"
+        ],
+        "features": [
+          {
+            "ball_term": "73/16",
+            "center_correlation": "1/4",
+            "column_norm_squared": "2",
+            "index": 0,
+            "margin": "0",
+            "margin_squared": "0",
+            "reason": "not_certified",
+            "safe_zero": false,
+            "strict_slack": "-73/16"
+          },
+          {
+            "ball_term": "0",
+            "center_correlation": "0",
+            "column_norm_squared": "0",
+            "index": 1,
+            "margin": "1/4",
+            "margin_squared": "1/16",
+            "reason": "strict_ball_test",
+            "safe_zero": true,
+            "strict_slack": "1/16"
+          }
+        ],
+        "gap": "73/32",
+        "n": 2,
+        "not_certified": [
+          0
+        ],
+        "objective": "||y-X beta||^2/(2N) + penalty*||beta||_1",
+        "p": 2,
+        "penalty": "1/4",
+        "prediction": [
+          "0",
+          "0"
+        ],
+        "primal": "11/4",
+        "radius_squared": "73/32",
+        "residual": [
+          "2",
+          "2"
+        ],
+        "residual_correlations": [
+          "2",
+          "0"
+        ],
+        "safe_zero": [
+          1
+        ],
+        "schema_version": 1,
+        "y": [
+          "2",
+          "2"
+        ]
+      }
+    }
+  ],
+  "schema_version": 1,
+  "scope": "exact stored-input Gap Safe audits, not solver acceleration or causal screening"
+}
