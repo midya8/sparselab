@@ -1,10 +1,20 @@
 # SparseLab
 
-A dependency-free LASSO reference that makes optimality and coefficient ambiguity visible. Fit small supplied regressions, inspect every sweep, and compare floating-point primal/dual/KKT witnesses with an independent exact-rational active/sign enumerator.
+SparseLab fits small LASSO regressions and records every solver sweep. Check the primal objective, dual gap and KKT residuals, then compare with exact-rational active/sign enumeration. The Python runtime has no dependencies.
 
-**A unique fitted prediction does not imply a unique selected feature.** In the duplicate-column control, forward sweeps select `[1.75, 0, -0.5]`, reverse sweeps select `[0, 1.75, -0.5]`, and their midpoint `[0.875, 0.875, -0.5]` is equally optimal. All have objective `5/8`, identical predictions and zero KKT residual. This is optimization geometry, not causal feature importance.
+In the duplicate-column control, forward sweeps select `[1.75, 0, -0.5]`, reverse sweeps select `[0, 1.75, -0.5]`, and their midpoint `[0.875, 0.875, -0.5]` is equally optimal. All have objective `5/8`, identical predictions and zero KKT residual. This is optimization geometry, not causal feature importance.
 
 ![LASSO path, duplicate-coefficient ambiguity and early-stopping audits](assets/sparsity-audit.svg)
+
+## Which calculation to use
+
+- `fit` and `path` compute floating-point solutions and report convergence witnesses.
+- `enumerate_optima` checks small inputs with exact active/sign enumeration.
+- `screen` audits a supplied iterate and can certify some coordinates zero in every optimizer. Failure to certify is not evidence of relevance.
+- `branch` checks the interval for one supplied sign pattern. It does not discover a complete path.
+
+The last two use rational arithmetic over the stored binary64 inputs. The
+floating solver's dual and KKT checks are not directed-rounding certificates.
 
 ## Run offline
 
@@ -33,7 +43,7 @@ report = path([[1, 1], [1, -1]], [2, 0], [1, 0.5, 0.25])
 exact = enumerate_optima([[1, 1], [1, -1]], [2, 0], 0.25)
 ```
 
-## What is actually computed
+## Solver and exact oracle
 
 - Minimize `||y-X beta||^2/(2N) + lambda*||beta||_1`. No hidden intercept, centering or standardization. Every supplied column, including an explicit constant column, is penalized.
 - Cyclic soft-threshold updates with recomputed partial residuals, configurable column order and initialization. Zero columns are handled explicitly.
@@ -41,7 +51,7 @@ exact = enumerate_optima([[1, 1], [1, -1]], [2, 0], 0.25)
 - Stop only when **both absolute gap and maximum KKT residual are at most `tolerance`**. Otherwise return `status="sweep_limit"`, not a fabricated success. `path.all_converged` propagates failures.
 - A separate bounded `Fraction` oracle enumerates `3^p` inactive/positive/negative patterns, solves nonsingular active normal equations with exact rational elimination, and accepts only exact KKT witnesses. Fractions represent the validated binary64 inputs exactly, not decimal idealizations. Singular patterns are counted and skipped, not ridge-regularized.
 
-## Three developed controls
+## Mathematical controls
 
 | Control | Observed result | Interpretation |
 |---|---|---|
@@ -57,7 +67,7 @@ The original 28 tests (retained): 25 behavior/CLI tests plus 3 figure tests. Ana
 
 The SVG checks cover all 18 coefficient points/polyline geometry, all 23 summary cells and their coordinates, full compressed JSON metadata, hidden intermediate-history tampering, and byte-exact regeneration. CI runs Python 3.10-3.13. The original five-module packaging check reproduced both CLI outputs; the extension below raises this to six modules and all four outputs.
 
-## Exact Gap Safe screening extension
+## Exact Gap Safe screening
 
 `screen(X,y,coefficients,penalty)` audits a supplied iterate with exact rational arithmetic over the stored binary64 inputs. It constructs an exactly feasible dual point and gap, then uses `R_squared=2*gap/N` and a **strict, square-root-free** sphere test to certify some coordinates zero in every optimizer. It does not change the floating solver or claim acceleration.
 
@@ -71,7 +81,7 @@ python -m sparselab screen examples/screen-input.json
 python examples/render_screening.py --check
 ```
 
-[Derivation, all six controls and arithmetic scope](SCREENING.md) · [Complete screening report](examples/screen-demo.json). The original 28 checks remain; 14 new behavior and 3 new SVG checks bring the total to **45 tests**. Includes 24 additional seeded exact-oracle soundness/ball-containment comparisons, strict equality, all exact equations and replication/scaling controls. New figure checks all 27 exact cells, two squared-bound bar geometries, full rational metadata and hidden-dual tampering. A six-module v0.2 wheel reproduces all four complete CLI JSON outputs outside checkout; both SVGs regenerate byte-exactly. Original core/oracle/demo/figure unchanged.
+[Derivation, all six controls and arithmetic scope](SCREENING.md) · [Complete screening report](examples/screen-demo.json). The original 28 checks remain; 14 new behavior and 3 new SVG checks brought that release to 45 tests. Includes 24 additional seeded exact-oracle soundness/ball-containment comparisons, strict equality, all exact equations and replication/scaling controls. New figure checks all 27 exact cells, two squared-bound bar geometries, full rational metadata and hidden-dual tampering. A six-module v0.2 wheel reproduces all four complete CLI JSON outputs outside checkout; both SVGs regenerate byte-exactly. Original core/oracle/demo/figure unchanged.
 
 Standard rule: Fercoq, Gramfort and Salmon, [Mind the duality gap: safer rules for the Lasso](https://proceedings.mlr.press/v37/fercoq15.html). Exact statements concern the rational model of the supplied stored inputs, not unknown pre-rounding data, causal relevance, statistical coverage or every true zero. No new screening theorem or speedup claim.
 
@@ -83,7 +93,7 @@ Floating-point dual/KKT witnesses are **not directed-rounding certificates**. Po
 
 Standard methods: Friedman, Hastie and Tibshirani, [Regularization Paths for Generalized Linear Models via Coordinate Descent](https://pmc.ncbi.nlm.nih.gov/articles/PMC2929880/), especially Section 2; Ryan Tibshirani's [Coordinate Descent notes](https://www.stat.cmu.edu/~ryantibs/convexopt/lectures/coord-desc.pdf) for soft-threshold/KKT and LASSO dual geometry. SparseLab's implementation, exact witnesses, controls and report format are original code applying those methods. MIT license.
 
-## Exact affine branch extension
+## Exact affine branches
 
 A feature can leave the LASSO support and later return with the opposite sign. `branch(X, y, signs)` solves one supplied branch's exact Gram equations and intersects all affine sign/inactive KKT inequalities. It returns the maximal closed nonnegative-lambda interval for that weak-sign branch, every bound/tie and exact zero-gap endpoint/interior witnesses. The developed two-feature control covers lambda from infinity to 0 with five explicitly supplied branches: feature 1 leaves at 1 and re-enters negative at 1/3. Adjacent knots agree exactly. Singular selected Grams are explicit noncertificates, not silently ridged or called infeasible.
 
@@ -97,6 +107,6 @@ python examples/render_branches.py --check
 
 [Derivation, exact interval table, weak-sign/singular semantics and limits](BRANCHES.md) · [complete exact report](examples/branch-demo.json) · [caller input](examples/branch-input.json).
 
-62 tests retain all 45 prior checks and add 14 branch behavior checks plus 3 figure checks. Twelve seeded five-row/three-feature designs exercise all 27supplied sign patterns, reconstruct accepted endpoint/interior KKT and zero gaps, and compare dyadic in-interval samples with the independent per-lambda enumerator. Analytic knots, all limiting ties/outside violations, transformations/N normalization, singleton/empty/singular controls, strict JSON and 128 x 12 capacity are checked. The third SVG verifies 20 table cells, both full path geometries/all 10vertices, five knots and full exact metadata including hidden-Gram tampering. The seven-module v0.3 wheel reproduces all six complete CLI JSON outputs outside checkout; all three SVGs regenerate byte-exactly. Original solver/oracle/demos/screening outputs are unchanged.
+62 tests retain all 45 prior checks and add 14 branch behavior checks plus 3 figure checks. Twelve seeded five-row/three-feature designs exercise all 27 supplied sign patterns, reconstruct accepted endpoint/interior KKT and zero gaps, and compare dyadic in-interval samples with the independent per-lambda enumerator. Analytic knots, all limiting ties/outside violations, transformations/N normalization, singleton/empty/singular controls, strict JSON and 128 x 12 capacity are checked. The third SVG verifies 20 table cells, both full path geometries/all 10 vertices, five knots and full exact metadata including hidden-Gram tampering. The seven-module v0.3 wheel reproduces all six complete CLI JSON outputs outside checkout; all three SVGs regenerate byte-exactly. Original solver/oracle/demos/screening outputs are unchanged.
 
 This is a one-branch verifier with standard KKT/linear algebra, not a general LARS/path-following implementation, full-path completeness guarantee, novel theorem or speed benchmark. Selected signs allow boundary zeros and are not a recovered support. Exactness concerns the stored binary64 inputs interpreted as rationals, not unknown pre-rounding data. The per-lambda oracle shares a linear-system helper; independent equation reconstruction and closed-form fixtures supplement that comparison. Established piecewise-linear path methods are credited in [BRANCHES.md](BRANCHES.md). No causal feature meaning or predictive advantage is claimed.
